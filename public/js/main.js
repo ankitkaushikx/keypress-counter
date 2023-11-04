@@ -11,7 +11,8 @@ class KeypressCounter {
     this.isStarted = false;
     this.reset = true;
     // Add an event listener to listen for keypress events
-    document.addEventListener("keypress", this.Keypress.bind(this));
+    document.addEventListener("keyup", this.Keypress.bind(this));
+    this.btn.addEventListener("click", this.StartCounting.bind(this));
     this.resetBtn.addEventListener("click", this.Reset.bind(this));
   }
 
